@@ -38,7 +38,7 @@ body {
 
 p {
   margin: 0 0 1em;
-  line-height: 1.3em; }
+  line-height: 1.6em; }
 
 blockquote {
   margin: 0 0 1em; }
@@ -60,16 +60,22 @@ a:hover {
   text-decoration: underline; }
 
 dl {
-  margin: 1em 0; }
+  margin: 1em 0;
+  line-height: 1.6em; }
 
 dt {
   font-weight: bold;
-  margin-bottom: 3px;
+  margin-bottom: 6px;
   font-size: 1.3em; }
 
 dd {
   font-style: italic;
-  margin-bottom: 1em; }
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid #c5c5c5; }
+
+dd:nth-last-of-type(2) {
+  border-bottom: 0; }
 
 /* HEADER */
 .header-wrap {
@@ -122,7 +128,8 @@ header h2 {
   position: relative;
   width: 420px;
   top: 50px;
-  color: white; }
+  color: white;
+  line-height: 1.3em; }
 
 .banner a {
   color: #f7b818; }
@@ -234,7 +241,7 @@ div.container {
   min-height: 100%;
   position: relative;
   padding-bottom: 30px;
-  margin-bottom: 60px; }
+  margin-bottom: 210px; }
 
 /* Primary */
 .primary {
@@ -316,6 +323,11 @@ input[type=text], input[type=date], input[type=password] {
 
 label {
   margin-bottom: 8px; }
+
+.styled-heading {
+  font-size: 50px;
+  font-family: "Swanky and Moo Moo", sans-serif;
+  margin-bottom: 0.3em; }
 
 /* Default Form Container */
 .form-box {

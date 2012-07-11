@@ -7,6 +7,9 @@
 */
 
 Route::controller('home');
+Route::get('faq', 'home@faq');
+Route::get('about', 'home@about');
+
 Route::get('login', 'membership@login');
 Route::post('login', 'membership@login');
 Route::get('logout', 'membership@logout');
@@ -15,7 +18,6 @@ Route::post('register', 'membership@register');
 Route::post('reset', 'membership@reset');
 Route::get('activate', 'membership@activate');
 
-Route::get('faq', 'home@faq');
 
 
 /*

@@ -45,5 +45,9 @@ class Home_Controller extends Base_Controller {
 	{
 		return View::make('home.faq');
 	}
-// 
+
+	public function get_about()
+	{
+		return View::make('home.about');
+	}
 }
