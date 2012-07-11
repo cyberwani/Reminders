@@ -36,5 +36,12 @@
 return array(
 
 	'docs' => array('handles' => 'docs'),
-
+	'swiftmailer' => array('auto' => true),
+	'aware' => array(
+		'autoloads' => array(
+			'map' => array(
+				'Aware' => '(:bundle)/model.php'
+			)
+		)
+	)
 );

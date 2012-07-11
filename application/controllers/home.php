@@ -1,6 +1,12 @@
 <?php
 
 class Home_Controller extends Base_Controller {
+	public $restful = true;
+
+	public function __construct()
+	{
+		$this->filter('before', 'registered?')->only('index');
+	}
 
 	/*
 	|--------------------------------------------------------------------------
@@ -30,9 +36,14 @@ class Home_Controller extends Base_Controller {
 	|
 	*/
 
-	public function action_index()
+	public function get_index()
 	{
-		return View::make('home.index');
+		return View::make('home');
 	}
 
+	public function get_faq()
+	{
+		return View::make('home.faq');
+	}
+// 
 }

@@ -1,0 +1,299 @@
+@import 'colors'
+@import 'helpers'
+@import 'base'
+@import 'header'
+@import 'nav'
+@import 'footer'
+@import 'buttons'
+
+
+footer .horiz a 
+	font-size: 11px
+	padding: 5px 10px
+
+
+
+
+.heading 
+	background: #444444
+	color: white
+	font-weight: normal
+	font-size: 15px
+	padding: 13px 0 13px 20px
+
+
+
+
+
+.container, .inner 
+	width: 600px
+	margin: auto
+
+
+div.container  
+	overflow: hidden
+	min-height: 100%
+	position: relative
+	padding-bottom: 30px
+	margin-bottom: 60px
+
+
+
+
+
+/* Primary */
+.primary 
+	float: right
+	width: 312px
+
+
+
+/* Paper */
+.paper 
+	background: white url(../img/paper-lines.png) 48px 0 repeat-y
+	clear: both
+	margin-bottom: 30px
+	position: relative
+	border: 1px solid #b5b5b5
+
+
+
+
+.paper li 
+	list-style: none
+	padding: 10px
+	padding-left: 68px
+	padding-right: 20px
+	border-bottom: 1px solid #e5e5e5
+	color: #1b1e22
+
+
+.paper.reminders li 
+	padding-left: 0
+
+
+.paper li .date 
+	font-size: 10px
+	display: inline-block
+	width: 48px
+	text-align: center
+	float: left
+	color: #c1272d
+	position: absolute
+
+.paper li .body 
+	padding-left: 68px
+
+
+.paper li a
+	color: inherit
+	text-decoration: none 
+
+.paper li a:hover
+	text-decoration: underline 
+
+.paper li:nth-child(even) 
+	background: #fbfbfb url(../img/paper-lines.png) 48px 0 repeat-y
+
+
+li form.verb 
+	display: none
+
+
+li:hover form.verb 
+	display: inline-block
+	float: right
+
+
+
+
+
+/* Create Form */
+.create 
+	background: white
+
+
+
+.create form 
+	padding: 25px
+
+
+
+/* Forms */
+
+form li
+	list-style: none
+	margin-bottom: 20px 
+
+textarea, input[type=text], input[type=date], input[type=password]
+	width: 100%
+	border: 1px solid #b6b6b6
+	border-radius: 3px
+	padding-left: 6px 
+
+textarea
+	padding-top: 6px
+	padding-bottom: 6px
+
+input[type=text], input[type=date], input[type=password]
+	height: 30px  
+
+label
+	margin-bottom: 8px 
+
+
+
+/* Default Form Container */
+.form-box 
+	background: white
+	padding: 20px 30px 10px
+	border: 1px solid #b5b5b5
+
+
+.form-box label 
+	display: block
+
+
+.form-box li 
+	margin-bottom: 20px
+
+
+.form-box input[type=text],
+.form-box input[type=date],
+.form-box input[type=password]
+.form-box textarea,
+.form-box label 
+	width: 100%
+	font-size: 12px
+
+.form-box input[type=submit] 
+	width: auto
+	margin-right: 10px
+
+
+
+/* When the form inputs should be half */
+.short-form input[type=text],
+.short-form input[type=date],
+.short-form input[type=password] 
+	width: 50% !important
+
+
+
+/* Notifications */
+.flash 
+	background: #f7b818
+	border-bottom: 1px solid #e1a715
+	border-top: 1px solid #e1a715
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	height: 50px
+	color: #1b1a1b
+	line-height: 50px
+	text-align: center
+	z-index: 2
+
+
+
+.hover-btn 
+	background: none
+	border: 1px solid #b5b5b5
+	border-radius: 50%
+	padding: 3px 6px
+	position: relative
+	top: -2px
+	float: right
+	color: white
+
+
+.hover-btn:hover 
+	background: #c1272d
+	cursor: pointer
+
+
+.delete 
+	top: -32px
+	right: 10px
+
+
+.note 
+	float: right
+	margin-right: 20px
+	font-size: .8em
+	padding-top: 2px
+	color: #b5b5b5
+
+
+/* Validation errors */
+.error 
+	color: red
+	font-style: italic
+	font-size: 10px
+	padding-left: 10px
+
+
+
+.steps 
+	min-height: 140px
+	width: 100%
+	position: relative
+	border: 1px solid #b5b5b5
+
+
+	border-radius: 3px
+	margin-bottom: 30px
+
+
+.steps h3,
+.steps p 
+	padding-left: 170px
+	padding-right: 50px
+
+
+.steps h3 
+
+	vertical-align: middle
+	position: relative
+	font-size: 2em
+	z-index: 2
+	margin-top: 30px
+	margin-bottom: 10px
+	
+
+
+.steps p 
+	color: #5b5b5b
+
+
+.steps:nth-child(3n) 
+	margin-right: 0
+
+
+.steps:before 
+	line-height: 140px
+	position: absolute
+	font-size: 100px
+	text-align: center
+	padding-left: 50px
+	color: #c1272d
+	text-shadow: 0 1px 0 #a1171c
+
+
+
+.steps:nth-child(1):before 
+	content: '1.'
+
+.steps:nth-child(2):before 
+	content: '2.'
+.steps:nth-child(3):before 
+	content: '3.'
+
+
+
+.horiz li 
+	display: inline
+	border-right: 1px solid #444
+	margin-right: 10px
+	padding-right: 10px

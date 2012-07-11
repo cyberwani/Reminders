@@ -1,3 +1,5 @@
+email.config
+
 # Numerous always-ignore extensions
 *.diff
 *.err
@@ -35,3 +37,5 @@ dwsync.xml
 intermediate
 publish
 .idea
+
+todo.txt
