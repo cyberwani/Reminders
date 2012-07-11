@@ -1,7 +1,7 @@
 @layout('layout')
 
 @section('content')
-	<h2 class="styled-heading">Why Email Reminders?</h2>
+	<h2 class="styled-heading">Email Reminders?</h2>
 
 	<p>It's happened to all of us countless times: "<em>Why didn't I remember to...</em>". 
 		And while todo lists go a long way, sometimes we fail to open them - whether
