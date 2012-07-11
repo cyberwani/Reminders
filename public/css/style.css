@@ -203,7 +203,7 @@ footer {
 .button,
 footer .horiz a {
   color: white;
-  text-shadow: 0 1px 0 #1b1a1b;
+  text-shadow: 0 1px 0 #333333;
   background: #c1272d;
   border: none;
   border-radius: 20px;
@@ -216,6 +216,10 @@ footer .horiz a {
 footer a:hover {
   text-decoration: none;
   background: #d94248; }
+
+.button:active,
+footer .horiz a:active {
+  background: #971e23; }
 
 a.button,
 footer a {
@@ -327,7 +331,8 @@ label {
 .styled-heading {
   font-size: 50px;
   font-family: "Swanky and Moo Moo", sans-serif;
-  margin-bottom: 0.3em; }
+  margin-bottom: 0.2em;
+  line-height: 1em; }
 
 /* Default Form Container */
 .form-box {

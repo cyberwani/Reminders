@@ -1,7 +1,7 @@
 .button,
 footer .horiz a 
 	color: white
-	text-shadow: 0 1px 0 #1b1a1b
+	text-shadow: 0 1px 0 darken(white, 80%)
 	background: $accent
 	border: none
 	border-radius: 20px
@@ -14,6 +14,10 @@ footer .horiz a
 footer a:hover 
 	text-decoration: none
 	background: $accent-light
+
+.button:active,
+footer .horiz a:active
+	background: $accent-dark
 
 a.button,
 footer a 
