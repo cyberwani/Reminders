@@ -23,17 +23,27 @@ class Membership_Controller extends Base_Controller {
 			'enabled'	 => 1
 		];
 
+
 		if ( Auth::attempt($creds) ) {
 			return Redirect::to('dashboard');
 		} else {
 			Input::flash();
-			return Redirect::to('login')->with('flash', 'Hmm - are you sure that you entered the correct credentials?');
+
+			// Let's see if they have an account, but haven't activated it.
+			unset($creds['enabled']);
+
+			if ( User::where_email_and_enabled(Input::get('email'), 0)->first() ) {
+				return Redirect::to('login')->with('flash', 'You have not yet activated your account. Please check your email.');
+			} else {
+				return Redirect::to('login')->with('flash', 'Hmm - are you sure that you entered the correct credentials?');
+			}
 		}
 	}
 
 	public function get_logout()
 	{
 		Auth::logout();
+
 		return Redirect::to('login');
 	}
 
@@ -64,7 +74,8 @@ class Membership_Controller extends Base_Controller {
 			( new Email )->send_signup_confirmation($user);
 			return Redirect::to('dashboard')->with('flash', 'Your account has successfully been created! We just need you to click the confirmation link in the email we just sent. Do it now!');
 		}
-		
+
+		Input::flash();
 		return Redirect::to('register')->with_errors($user->errors);		
 	}
 
