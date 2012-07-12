@@ -23,7 +23,6 @@ class Membership_Controller extends Base_Controller {
 			'enabled'	 => 1
 		];
 
-
 		if ( Auth::attempt($creds) ) {
 			return Redirect::to('dashboard');
 		} else {
@@ -72,7 +71,7 @@ class Membership_Controller extends Base_Controller {
 		if ( $user->save() ) {
 			// If successful, send confirmation/welcome email
 			( new Email )->send_signup_confirmation($user);
-			return Redirect::to('dashboard')->with('flash', 'Your account has successfully been created! We just need you to click the confirmation link in the email we just sent. Do it now!');
+			return Redirect::to('/')->with('flash', 'Your account has successfully been created! We just need you to click the confirmation link in the email we just sent. Do it now!');
 		}
 
 		Input::flash();
