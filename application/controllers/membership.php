@@ -110,7 +110,9 @@ class Membership_Controller extends Base_Controller {
 				$user->save();
 
 				return Redirect::to('login')->with('flash', 'You may now login! Your account is active.');
+			} else {
+				return Redirect::to('/')->with('flash', 'The activation credentials provided do not match what is stored in the database.');
 			}
-		}
+		} 
 	}
 }
