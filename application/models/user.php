@@ -17,14 +17,14 @@ class User extends Aware {
 		return $this->has_many('Reminder');
 	}
 
-	public function set_password($pwd)
-	{
-		$this->set_attribute('password', Hash::make($pwd));
-	}
-
 	public function get_full_name()
 	{
 		return $this->get_attribute('first_name') . ' ' . $this->get_attribute('last_name');
+	}
+
+	public function set_password($pwd)
+	{
+		$this->set_attribute('password', Hash::make($pwd));
 	}
 
 	public static function generate_activation()
