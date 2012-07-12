@@ -9,7 +9,7 @@ class User extends Aware {
 		'email'      	  => 'required|email',
 		'password'   	  => 'required|min:4', // |confirmed
 		'activation_code' => 'required',
-		'enabled'		  => 'required|integer'
+		'enabled'		  => 'integer'
 	];
 
 	public function reminders()
