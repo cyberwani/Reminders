@@ -6,7 +6,7 @@ class User extends Aware {
 	public static $rules = [
 		'first_name' 	  => 'required',
 		'last_name' 	  => 'required',
-		'email'      	  => 'required|email',
+		'email'      	  => 'required|email|unique:users',
 		'password'   	  => 'required|min:4', // |confirmed
 		'activation_code' => 'required',
 		'enabled'		  => 'integer'
